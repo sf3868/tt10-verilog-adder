@@ -41,14 +41,5 @@ module tb ();
       .clk    (clk),      // clock
       .rst_n  (rst_n)     // not reset
   );
-
-   // Stimulus
-  initial begin
-    ui_in  = 8'b00000001; uio_in = 8'b00000001; #10;
-    ui_in  = 8'b00001111; uio_in = 8'b00000001; #10;
-    ui_in  = 8'b11111111; uio_in = 8'b00000001; #10; // Overflow case
-    ui_in  = 8'b10101010; uio_in = 8'b01010101; #10;
-    $finish;
-  end 
      
 endmodule
