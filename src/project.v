@@ -16,7 +16,7 @@ module tt_um_project (
 
   // Unused signals must be assigned to avoid warnings
   assign uio_out = 8'b00000000;
-  assign uio_oe  = 8'b00000000;
+  assign uio_oe  = 8'b11111111;
 
   // Prevent warnings by listing unused signals
   wire _unused = &{ena, clk, rst_n, 1'b0};
