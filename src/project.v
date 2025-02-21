@@ -1,6 +1,6 @@
 `default_nettype none
 
-module tt_um_adder (
+module tt_um_project (
     input  wire [7:0] ui_in,    // First 8-bit input
     input  wire [7:0] uio_in,   // Second 8-bit input
     output wire [7:0] uo_out,   // 8-bit output (sum)
