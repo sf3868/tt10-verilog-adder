@@ -29,20 +29,14 @@ module tb ();
 
   // Replace tt_um_example with your module name:
   tt_um_project user_project (
-
+     
       // Include power ports for the Gate Level test:
 `ifdef GL_TEST
       .VPWR(VPWR),
       .VGND(VGND),
 `endif
 
-     // Stimulus
-  initial begin
-    ui_in  = 8'b00000001; uio_in = 8'b00000001; #10;
-    ui_in  = 8'b00001111; uio_in = 8'b00000001; #10;
-    ui_in  = 8'b11111111; uio_in = 8'b00000001; #10; // Overflow case
-    ui_in  = 8'b10101010; uio_in = 8'b01010101; #10;
-    $finish;
+   
   end
       .ui_in  (ui_in),    // Dedicated inputs
       .uo_out (uo_out),   // Dedicated outputs
@@ -54,5 +48,12 @@ module tb ();
       .rst_n  (rst_n)     // not reset
   );
 
-   
+   // Stimulus
+  initial begin
+    ui_in  = 8'b00000001; uio_in = 8'b00000001; #10;
+    ui_in  = 8'b00001111; uio_in = 8'b00000001; #10;
+    ui_in  = 8'b11111111; uio_in = 8'b00000001; #10; // Overflow case
+    ui_in  = 8'b10101010; uio_in = 8'b01010101; #10;
+    $finish;
+     
 endmodule
