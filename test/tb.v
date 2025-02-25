@@ -24,7 +24,7 @@ module tb ();
   wire [7:0] uio_oe;
 
   // Replace tt_um_example with your module name:
-  priority_16_8_encoder (
+  tt_um_project user_project (
      
       // Include power ports for the Gate Level test:
 `ifdef GL_TEST
